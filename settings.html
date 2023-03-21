@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<!----------------------------------[ HEAD ]---------------------------------->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language of the Emblem</title>
+    <link rel="stylesheet" href="./themes/fe1-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<!----------------------------------[ BODY ]---------------------------------->
+<body class="main-bg">
+
+    <!-- -----[ LOGO ]----- -->
+    <div>
+        <img src="./themes/images/fe1logo.png">
+    </div>
+    
+    <!-- LANGUAGE OPTIONS -->
+    <div class="clearfix" style="float:right;">
+        <a href="./pt-br/configuracoes.html">
+            <img src="./themes/images/lang-ptbr.png" class="flag" id="lang-pt">
+        </a>
+        <a href="#">
+            <img src="./themes/images/lang-en.png" class="flag simple-border" id="lang-en">
+        </a>
+    </div>
+
+<!----------------------------------[ TOP NAV ]---------------------------------->
+
+    <div class="topnav" id="mainTopnav">
+        <a href="./index.html">Home</a>
+        <a href="./path-of-katakana.html">Path of Katakana</a>
+        <a href="./settings.html" class="active">Settings</a>
+        <a href="javascript:void(0);" class="icon" onclick='$("#mainTopnav").toggleClass("responsive")'>
+            <img src="./themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+    </div>
+
+<!----------------------------------[ CONTENT ]---------------------------------->
+
+    <div class="dialog center-fit">
+        <p>Settings</p>
+    </div>
+    <p></p>
+
+    <!----[ SETTINGS ]---->
+    <div class="dialog">
+
+        <table class="spaced-table">
+            <tr>
+                <td>Play music</td>
+                <td id="play-music" onclick="setMusicPlay('en')" class="click">ON</td>
+            </tr>
+        </table>
+
+        <p class="settings-click" id="reset-progress">Reset all progress</p>
+    </div>
+
+<!----------------------------------[ RESET MODAL ]---------------------------------->
+    <!-- CONFIRM RESET MODAL -->
+    <div id="reset-modal" class="modal">
+
+        <!-- PAGE 1 -->
+        <div class="modal-content" id="reset-pg-1">
+            <div class="modal-header">
+                <h2>RESET PROGRESS?</h2>
+            </div>
+
+            <div class="modal-body" id="reset-text">
+                <p>※「We use local storage to keep track of data. Do you wish to reset 
+                all progress made? This action cannot be undone.</p>
+                <p class="settings-click" id="reset-yes">Yes</p>
+                <p class="settings-click" id="reset-no">No</p>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="modal-content" id="reset-pg-2" style="display:none">
+            <div class="modal-header">
+                <h2>PROGRESS RESET</h2>
+            </div>
+
+            <div class="modal-body" id="reset-text">
+                <p>※「Progress has been reset.</p>
+                
+                <p class="settings-click" id="reset-close">Close</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./settings-scripts.js"></script>
+        
+</body>
+
+</html>

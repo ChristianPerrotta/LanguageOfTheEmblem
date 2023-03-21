@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt">
+
+<!----------------------------------[ HEAD ]---------------------------------->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language of the Emblem</title>
+    <link rel="stylesheet" href="../themes/fe1-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<!----------------------------------[ BODY ]---------------------------------->
+<body class="main-bg">
+
+    <!-- LOGO -->
+    <div>
+        <img src="../themes/images/fe1logo.png">
+    </div>
+
+    <!-- LANGUAGE OPTIONS -->
+    <div class="clearfix" style="float:right;">
+        <a href="#">
+            <img src="../themes/images/lang-ptbr.png" class="flag simple-border" id="lang-pt">
+        </a>
+        <a href="../path-of-katakana.html">
+            <img src="../themes/images/lang-en.png" class="flag" id="lang-en">
+        </a>
+    </div>
+
+<!----------------------------------[ TOP NAV ]---------------------------------->
+
+    <div class="topnav" id="mainTopnav">
+        <a href="./inicio.html">Início</a>
+        <a href="./caminho-do-katakana.html" class="active">Caminho do Katakana</a>
+        <a href="./configuracoes.html">Configurações</a>
+        <a href="javascript:void(0);" class="icon" onclick='$("#mainTopnav").toggleClass("responsive")'>
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+    </div>
+
+<!----------------------------------[ CONTENT ]---------------------------------->
+
+        <div class="dialog center-fit">
+            <p>　　Escolha um capítulo　　</p>
+        </div>
+        
+        <div class="portrait center-fit">
+            <img src="../themes/fe1-portraits/fe1port-anna.png" style="width:96px">
+        </div>
+
+        <div class="side-chapters center-fit" style="width:200px;">
+            <a href="./pok/pok-prologue.html" id="nav-prologue">Prólogo</a>
+            <a href="./pok/pok-ch1.html" class="locked" id="nav-ch1">Capítulo 1</a>
+            <a href="./pok/pok-ch2.html" class="locked" id="nav-ch2">Capítulo 2</a>
+            <a href="" class="locked" id="nav-ch3">Capítulo 3</a>
+        </div>
+
+    <script src="../progress-check.js"></script>
+    
+    </body>
+
+</html>

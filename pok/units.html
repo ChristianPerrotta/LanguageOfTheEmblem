@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<!----------------------------------[ HEAD ]---------------------------------->
+<head>
+    <!-- CHECKS IF CHAPTER IS UNLOCKED --
+    <script>
+        if (localStorage.getItem("nav-units") === null) {
+            window.location.replace("../path-of-katakana.html");
+        }
+    </script>
+
+    <!-- HANDWRITING SCRIPT -->
+    <script type="text/javascript" src="../handwriting.canvas.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Path of Katakana: Units</title>
+    <link rel="stylesheet" href="../themes/fe1-theme.css">
+    <link rel="stylesheet" href="../themes/css-anim-trans.css">
+
+</head>
+
+<!----------------------------------[ BODY ]---------------------------------->
+
+<body class="main-bg">
+
+    <div id="preload" class="selected" hidden></div> <!-- use this to preload images -->
+    
+    <!-- -----[ HEADER ]----- -->
+    <div>
+        <img src="../themes/images/fe1logo.png">
+    </div>
+
+<!----------------------------------[ TOP NAV ]---------------------------------->
+
+    <div class="topnav" id="mainTopnav">
+        <a href="../index.html">Home</a>
+        <a href="../path-of-katakana.html" class="active">Path of Katakana</a>
+        <a href="../settings.html">Settings</a>
+        <a href="javascript:void(0);" class="icon" onclick="topNavResp()">
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+
+        <script src="../scripts.js"></script>
+    </div>
+
+        
+<div class="flex-container"> <!-- contais both side nav and main content -->
+
+<!----------------------------------[ SIDE NAV ]---------------------------------->
+
+    <div class="sidenav" style="flex-shrink: 0" id="sideNav">
+        <a href="./pok-prologue.html" id="nav-prologue">Prologue</a>
+        <a href="./pok-ch1.html" id="nav-ch1">Chapter 1</a>
+        <a href="./pok-ch2.html" class="active" id="nav-ch2">Chapter 2</a>
+        <a href="" class="locked" id="nav-ch3">Chapter 3</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="sideNavResp()" id="sideNavIcon">
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+    </div>
+
+    <script src="../progress-check.js"></script>
+
+<!------------------------------------------------------------------------------------>
+<!----------------------------------[ MAIN CONTENT ]---------------------------------->
+<!------------------------------------------------------------------------------------>
+
+        <div class="chapter-box">
+
+<!-------------------------------------[ ROSTER ]------------------------------------->
+            <div id="units-box" class="invisible">
+                
+                <div class="dialog">
+
+                    <p id="no-units" style="display:none;">No units recruited yet.<p>
+
+
+                    <table>
+                        <tr style="width:100%;">
+                            <td id="Marth" style="display:none;" onclick="showUnit('Marth')">マルス</td>
+                            <td id="Matthis" style="display:none;" onclick="showUnit('Matthis')">マチス</td>
+                        </tr>
+
+                        <tr>
+                            <td id="Elice" style="display:none;" onclick="showUnit('Elice')">エリス</td>
+                            <td id="Dolph" style="display:none;" onclick="showUnit('Dolph')">トムス</td>
+                        </tr>
+
+                        <tr>
+                            <td id="Tomas" style="display:none;" onclick="showUnit('Tomas')">トーマス</td>
+                            <td id="Est" style="display:none;" onclick="showUnit('Est')">エスト</td>
+                        </tr>
+
+
+
+                    </table>
+                </div>
+            </div>
+
+
+        <!-- END OF SCENE PAGE -->
+         </div>
+        <script>
+            function showUnit(unit) {
+
+            }
+
+
+            localStorage.setItem("units", "Marth,Matthis");
+            if (localStorage.getItem("units") === null) {
+                document.getElementById("no-units").style.display = "block";
+            } else {
+                var unitsArr = localStorage.getItem("units").split(",");
+                for (let i = 0; i < unitsArr.length; i++) {
+                    document.getElementById(unitsArr[i]).style.display = "table-cell";
+                }
+            }
+            document.getElementById("units-box").className += " fade-in";
+        </script>
+</div>
+
+    </body>
+
+</html>

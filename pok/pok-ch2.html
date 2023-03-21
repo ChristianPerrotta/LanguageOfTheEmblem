@@ -1,0 +1,1122 @@
+<!doctype html>
+<html>
+
+<!----------------------------------[ HEAD ]---------------------------------->
+<head>
+    <!-- CHECKS IF CHAPTER IS UNLOCKED --
+    <script>
+        if (localStorage.getItem("nav-ch2") === null) {
+            window.location.replace("./pok-ch1.html");
+        }
+    </script>
+
+    <!-- HANDWRITING SCRIPT -->
+    <script type="text/javascript" src="../handwriting.canvas.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Path of Katakana: Chapter 2</title>
+    <link rel="stylesheet" href="../themes/fe1-theme.css">
+    <link rel="stylesheet" href="../themes/css-anim-trans.css">
+
+</head>
+
+<!----------------------------------[ BODY ]---------------------------------->
+
+<body class="main-bg">
+
+    <div id="preload" class="selected" hidden></div> <!-- use this to preload images -->
+    
+    <!-- -----[ HEADER ]----- -->
+    <div>
+        <img src="../themes/images/fe1logo.png">
+    </div>
+
+<!----------------------------------[ TOP NAV ]---------------------------------->
+
+    <div class="topnav" id="mainTopnav">
+        <a href="../index.html">Home</a>
+        <a href="../path-of-katakana.html" class="active">Path of Katakana</a>
+        <a href="../settings.html">Settings</a>
+        <a href="javascript:void(0);" class="icon" onclick="topNavResp()">
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+
+        <script src="../scripts.js"></script>
+    </div>
+
+        
+<div class="flex-container"> <!-- contais both side nav and main content -->
+
+<!----------------------------------[ SIDE NAV ]---------------------------------->
+
+    <div class="sidenav" style="flex-shrink: 0" id="sideNav">
+        <a href="./pok-prologue.html" id="nav-prologue">Prologue</a>
+        <a href="./pok-ch1.html" id="nav-ch1">Chapter 1</a>
+        <a href="./pok-ch2.html" class="active" id="nav-ch2">Chapter 2</a>
+        <a href="" class="locked" id="nav-ch3">Chapter 3</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="sideNavResp()" id="sideNavIcon">
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+    </div>
+
+    <script src="../progress-check.js"></script>
+
+<!------------------------------------------------------------------------------------>
+<!----------------------------------[ MAIN CONTENT ]---------------------------------->
+<!------------------------------------------------------------------------------------>
+
+        <div class="chapter-box">
+
+<!-------------------------------------[ SCENE 1: NEW KANA ト ]------------------------------------->
+            <div id="scene-1" class="invisible">
+                
+                <div class="dialog center-fit">
+                    <p>NEW KATAKANA</p>
+                </div>
+
+                <!-- NEW KANA INFO -->
+                <div class="dialog">
+                    <table style="width:100%;">
+                        <tr>
+                            <td><p class="new-kana">ト</p></td>
+                            <td><p class="reading">TO</p>
+                                <p class="stroke-count">2 strokes</p></td>
+                            <td><img class="click" id="sound-to" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- WRITING CANVAS -->
+                <div class="dialog">
+                    <p>Practice writing the new katakana on the box below.</p>
+
+                    <div class="canvas-container">
+                        <img class="back-kana" src="../themes/images/katakana/kso-to.png">
+                        <canvas id="canvas-1" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-1" class="check-canvas click" onclick="canvas_1.recognize();">CHECK</p>
+                        <p id="clear-canvas-1" class="check-canvas click" onclick="canvas_1.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 2: NEW KANA ム ]------------------------------------->
+            <div id="scene-2" style="display:none;">
+                
+                <div class="dialog center-fit">
+                    <p>NEW KATAKANA</p>
+                </div>
+
+                <!-- NEW KANA INFO -->
+                <div class="dialog">
+                    <table style="width:100%;">
+                        <tr>
+                            <td><p class="new-kana">ム</p></td>
+                            <td><p class="reading">MU</p>
+                                <p class="stroke-count">2 strokes</p></td>
+                            <td><img class="click" id="sound-mu" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- WRITING CANVAS -->
+                <div class="dialog">
+                    <p>Practice writing the new katakana on the box below.</p>
+
+                    <div class="canvas-container">
+                        <img class="back-kana" src="../themes/images/katakana/kso-mu.png">
+                        <canvas id="canvas-2" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-2" class="check-canvas click" onclick="canvas_2.recognize();">CHECK</p>
+                        <p id="clear-canvas-2" class="check-canvas click" onclick="canvas_2.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 3: NEW KANA エ ]------------------------------------->  
+            <div id="scene-3" style="display:none;">
+                
+                <div class="dialog center-fit">
+                    <p>NEW KATAKANA</p>
+                </div>
+
+                <!-- NEW KANA INFO -->
+                <div class="dialog">
+                    <table style="width:100%;">
+                        <tr>
+                            <td><p class="new-kana">エ</p></td>
+                            <td><p class="reading">E</p>
+                                <p class="stroke-count">3 strokes</p></td>
+                            <td><img class="click" id="sound-e" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- WRITING CANVAS -->
+                <div class="dialog">
+                    <p>Practice writing the new katakana on the box below.</p>
+
+                    <div class="canvas-container">
+                        <img class="back-kana" src="../themes/images/katakana/kso-e.png">
+                        <canvas id="canvas-3" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-3" class="check-canvas click" onclick="canvas_3.recognize();">CHECK</p>
+                        <p id="clear-canvas-3" class="check-canvas click" onclick="canvas_3.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 4: NEW KANA リ ]------------------------------------->
+            <div id="scene-4" style="display:none;">
+                
+                <div class="dialog center-fit">
+                    <p>NEW KATAKANA</p>
+                </div>
+
+                <!-- NEW KANA INFO -->
+                <div class="dialog">
+                    <table style="width:100%;">
+                        <tr>
+                            <td><p class="new-kana">リ</p></td>
+                            <td><p class="reading">RI</p>
+                                <p class="stroke-count">2 strokes</p></td>
+                            <td><img class="click" id="sound-ri" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- WRITING CANVAS -->
+                <div class="dialog">
+                    <p>Practice writing the new katakana on the box below.</p>
+
+                    <div class="canvas-container">
+                        <img class="back-kana" src="../themes/images/katakana/kso-ri.png">
+                        <canvas id="canvas-4" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-4" class="check-canvas click" onclick="canvas_4.recognize();">CHECK</p>
+                        <p id="clear-canvas-4" class="check-canvas click" onclick="canvas_4.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 5: DRILL 1-1 ]------------------------------------->
+            <div id="scene-5" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 1</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the reading of the following character?</p>
+                    <p class="reading">ム</p>
+                    <p class="drill-option clickable" onclick="correct(this)">MU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">MA</p>
+                    <p class="drill-option clickable" onclick="incorrect()">SU</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 6: DRILL 1-2 ]------------------------------------->
+            <div id="scene-6" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 1</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the reading of the following character?</p>
+                    <p class="reading">リ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">RU</p>
+                    <p class="drill-option clickable" onclick="correct(this)">RI</p>
+                    <p class="drill-option clickable" onclick="incorrect()">SO</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 7: DRILL 1-3 ]------------------------------------->
+            <div id="scene-7" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 1</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the reading of the following character?</p>
+                    <p class="reading">ト</p>
+                    <p class="drill-option clickable" onclick="correct(this)">TO</p>
+                    <p class="drill-option clickable" onclick="incorrect()">DO</p>
+                    <p class="drill-option clickable" onclick="incorrect()">RE</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 8: DRILL 1-4 ]------------------------------------->
+            <div id="scene-8" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 1</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the reading of the following character?</p>
+                    <p class="reading">エ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">I</p>
+                    <p class="drill-option clickable" onclick="incorrect()">A</p>
+                    <p class="drill-option clickable" onclick="correct(this)">E</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 9: DRILL 2-1 ]------------------------------------->
+            <div id="scene-9" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 2</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct character for the sound below.</p>
+                    <p class="reading">RI</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ソ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">サ</p>
+                    <p class="drill-option clickable" onclick="correct(this)">リ</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 10: DRILL 2-2 ]------------------------------------->
+            <div id="scene-10" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 2</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct character for the sound below.</p>
+                    <p class="reading">E</p>
+                    <p class="drill-option clickable" onclick="correct(this)">エ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">イ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ク</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 11: DRILL 2-3 ]------------------------------------->
+            <div id="scene-11" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 2</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct character for the sound below.</p>
+                    <p class="reading">MU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">マ</p>
+                    <p class="drill-option clickable" onclick="correct(this)">ム</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ワ</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 12: DRILL 2-4 ]------------------------------------->
+            <div id="scene-12" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 2</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct character for the sound below.</p>
+                    <p class="reading">TO</p>
+                    <p class="drill-option clickable" onclick="correct(this)">ト</p>
+                    <p class="drill-option clickable" onclick="incorrect()">エ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ス</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 13: DRILL 3 ]------------------------------------->
+            <div id="scene-13" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 3</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Select the two characters that have the same vowel sound (in this case: <b>i</b>).</p>
+                    <div class="flex-row" style="flex-wrap:wrap;">
+                        <p class="selectable" onclick="selectKana(this, 'chi');">チ</p>
+                        <p class="selectable" onclick="selectKana(this, 'su');">ス</p>
+                        <p class="selectable" onclick="selectKana(this, 'e');">エ</p>
+                        <p class="selectable" onclick="selectKana(this, 'ru');">ル</p>
+                        <p class="selectable" onclick="selectKana(this, 'ri');">リ</p>
+                        <p class="selectable" onclick="selectKana(this, 'ma');">マ</p>
+                        <p class="selectable" onclick="selectKana(this, 'to');">ト</p>
+                    </div>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 14: DRILL 4-1 ]------------------------------------->
+            <div id="scene-14" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 4</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the correct katakana for the sound <b>E</b>.</p>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-14" class="back-kana" src="../themes/images/katakana/kso-e.png" style="visibility:hidden;">
+                        <canvas id="canvas-14" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-14" class="check-canvas click" onclick="canvas_14.recognize();">CHECK</p>
+                        <p id="clear-canvas-14" class="check-canvas click" onclick="canvas_14.erase();">CLEAR</p>
+                        <p class="check-canvas click" onclick="showHint();">HINT</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 15: DRILL 4-2 ]------------------------------------->
+            <div id="scene-15" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 4</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the correct katakana for the sound <b>TO</b>.</p>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-15" class="back-kana" src="../themes/images/katakana/kso-to.png" style="visibility:hidden;">
+                        <canvas id="canvas-15" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-15" class="check-canvas click" onclick="canvas_15.recognize();">CHECK</p>
+                        <p id="clear-canvas-15" class="check-canvas click" onclick="canvas_15.erase();">CLEAR</p>
+                        <p class="check-canvas click" onclick="showHint();">HINT</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 16: DRILL 4-3 ]------------------------------------->
+            <div id="scene-16" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 4</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the correct katakana for the sound <b>RI</b>.</p>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-16" class="back-kana" src="../themes/images/katakana/kso-ri.png" style="visibility:hidden;">
+                        <canvas id="canvas-16" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-16" class="check-canvas click" onclick="canvas_16.recognize();">CHECK</p>
+                        <p id="clear-canvas-16" class="check-canvas click" onclick="canvas_16.erase();">CLEAR</p>
+                        <p class="check-canvas click" onclick="showHint();">HINT</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 17: DRILL 4-4 ]------------------------------------->
+            <div id="scene-17" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 4</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the correct katakana for the sound <b>MU</b>.</p>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-17" class="back-kana" src="../themes/images/katakana/kso-mu.png" style="visibility:hidden;">
+                        <canvas id="canvas-17" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-17" class="check-canvas click" onclick="canvas_17.recognize();">CHECK</p>
+                        <p id="clear-canvas-17" class="check-canvas click" onclick="canvas_17.erase();">CLEAR</p>
+                        <p class="check-canvas click" onclick="showHint();">HINT</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 18: DRILL 5 ]------------------------------------->
+            <div id="scene-18" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 5</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Select the two characters that have the same consonant sound (in this case: <b>m</b>).</p>
+                    <div class="flex-row" style="flex-wrap:wrap;">
+                        <p class="selectable" onclick="selectKana(this, 'ru');">ル</p>
+                        <p class="selectable" onclick="selectKana(this, 'ri');">リ</p>
+                        <p class="selectable" onclick="selectKana(this, 'ma');">マ</p>
+                        <p class="selectable" onclick="selectKana(this, 'to');">ト</p>
+                        <p class="selectable" onclick="selectKana(this, 'e');">エ</p>
+                        <p class="selectable" onclick="selectKana(this, 'mu');">ム</p>
+                        <p class="selectable" onclick="selectKana(this, 'su');">ス</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 19: RECRUITMENT ELICE ]------------------------------------->
+            <div id="scene-19" style="display:none;">
+                
+                <div class="dialog speech" style="text-align:center;">
+                    <p>RECRUITMENT</p>
+                </div>
+                
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-elice.png" 
+                    id="speaking-elice1-19" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-elice-speak.png" 
+                    id="speaking-elice2-19" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-19" onclick="proceedText('19')";>
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-19"></p>
+
+                    <div id ="stats-recruit-19" style="display:none;">
+                        <br><table>
+                            <tr>
+                                <td>ENGLISH NAME:</td><td> Elice</td>
+                            </tr>
+                            <tr>
+                                <td>JAPANESE NAME:</td><td>エリス</td>
+                            </tr>
+                            <tr>
+                                <td>CLASS:</td><td>そうりょ (Curate)</td>
+                            </tr>
+                            <tr>
+                                <td>COUNTRY:</td><td>アリティア (Altea)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-19"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 20: RECRUITMENT DOLPH ]------------------------------------->
+            <div id="scene-20" style="display:none;">
+                
+                <div class="dialog speech" style="text-align:center;">
+                    <p>RECRUITMENT</p>
+                </div>
+                
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-dolph.png" 
+                    id="speaking-dolph1-20" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-dolph-speak.png" 
+                    id="speaking-dolph2-20" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-20" onclick="proceedText('20')";>
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-20"></p>
+
+                    <div id ="stats-recruit-20" style="display:none;">
+                        <br><table>
+                            <tr>
+                                <td>ENGLISH NAME:</td><td> Dolph</td>
+                            </tr>
+                            <tr>
+                                <td>JAPANESE NAME:</td><td>トムス</td>
+                            </tr>
+                            <tr>
+                                <td>CLASS:</td><td>A・ナイト (Knight)</td>
+                            </tr>
+                            <tr>
+                                <td>COUNTRY:</td><td>アカネイア (Archanea)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-20"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 21: DRILL 6-1 ]------------------------------------->
+            <div id="scene-21" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 6</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct pronunciation of the name below.</p>
+                    <p class="reading">エリス</p>
+                    <p class="drill-option clickable" onclick="incorrect()">IRISU</p>
+                    <p class="drill-option clickable" onclick="correct(this)">ERISU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ERUSU</p>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 22: DRILL 6-2 ]------------------------------------->
+            <div id="scene-22" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 6</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct pronunciation of the name below.</p>
+                    <p class="reading">トムス</p>
+                    <p class="drill-option clickable" onclick="incorrect()">TOMASU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">TAMOSU</p>
+                    <p class="drill-option clickable" onclick="correct(this)">TOMUSU</p>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 23: DRILL 7-1 ]------------------------------------->
+            <div id="scene-23" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 7</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the Japanese version of the following word?</p>
+                    <p class="reading">Elice</p>
+                    <p class="drill-option clickable" onclick="correct(this)">エリス</p>
+                    <p class="drill-option clickable" onclick="incorrect()">エソス</p>
+                    <p class="drill-option clickable" onclick="incorrect()">エリク</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 24: DRILL 7-2 ]------------------------------------->
+            <div id="scene-24" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 7</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the Japanese version of the following word?</p>
+                    <p class="reading">Dolph</p>
+                    <p class="drill-option clickable" onclick="incorrect()">トマク</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ナムケ</p>
+                    <p class="drill-option clickable" onclick="correct(this)">トムス</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 25: DRILL 8-1 ]------------------------------------->
+            <div id="scene-25" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 8</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the Japanese name for <b>Elice</b>.</p>
+
+                    <table style="margin:auto;margin-bottom: 10px;">
+                        <tr>
+                            <td id="scene-25-kana-1" class="masu-drill"></td>
+                            <td id="scene-25-kana-2" class="masu-drill"></td>
+                            <td id="scene-25-kana-3" class="masu-drill"></td>
+                        </tr>
+                    </table>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-25" class="back-kana" src="../themes/images/katakana/kso-e.png" style="visibility:hidden;">
+                        <canvas id="canvas-25" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-25" class="check-canvas click" onclick="canvas_25.recognize();">CHECK</p>
+                        <p id="clear-canvas-25" class="check-canvas click" onclick="canvas_25.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 26: DRILL 8-2 ]------------------------------------->
+            <div id="scene-26" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 8</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the Japanese name for <b>Dolph</b>.</p>
+
+                    <table style="margin:auto;margin-bottom: 10px;">
+                        <tr>
+                            <td id="scene-26-kana-1" class="masu-drill"></td>
+                            <td id="scene-26-kana-2" class="masu-drill"></td>
+                            <td id="scene-26-kana-3" class="masu-drill"></td>
+                        </tr>
+                    </table>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-26" class="back-kana" src="../themes/images/katakana/kso-to.png" style="visibility:hidden;">
+                        <canvas id="canvas-26" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-26" class="check-canvas click" onclick="canvas_26.recognize();">CHECK</p>
+                        <p id="clear-canvas-26" class="check-canvas click" onclick="canvas_26.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 27: NEW MECHANIC ー ]------------------------------------->
+            <div id="scene-27" style="display:none;">
+                
+                <div class="dialog speech" style="text-align:center;">
+                    <p>NEW MECHANIC</p>
+                </div>
+                
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-gotoh.png" 
+                    id="speaking-gotoh1-27" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-gotoh-speak.png" 
+                    id="speaking-gotoh2-27" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-27" onclick="proceedText('27')";>
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-27"></p>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-27"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 28: NEW KANA ー ]------------------------------------->
+            <div id="scene-28" style="display:none;">
+                
+                <div class="dialog center-fit">
+                    <p>NEW MECHANIC</p>
+                </div>
+
+                <!-- NEW KANA INFO -->
+                <div class="dialog">
+                    <table style="width:100%;margin:10px;">
+                        <tr>
+                            <td><p class="new-kana">ー</p></td>
+                            <td><p class="mechanic-description">makes the vowel longer</p></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- EXAMPLES -->
+                <div class="dialog">
+                    <p>Examples:</p>
+                    <table style="border-spacing:5px;">
+                        <tr>
+                            <td><p class="new-kana">ト</p></td>
+                            <td><img class="click" id="sound-to2" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="reading">TO</p></td>
+                            <td><p class="stroke-count" style="margin:0;">normal<br>length</p></td>
+                            
+                        </tr>
+                    </table>
+
+                    <table style="border-spacing:5px;">
+                        <tr>
+                            <td><p class="new-kana">ト</p></td>
+                            <td><p class="new-kana">ー</p></td>
+                            <td><img class="click" id="sound-tou" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="reading">TOO</p></td>
+                            <td><p class="stroke-count" style="margin:0;">longer<br>length</p></td>
+                        </tr>
+                    </table>
+
+                    <table style="border-spacing:5px;">
+                        <tr>
+                            <td><p class="new-kana">エ</p></td>
+                            <td><img class="click" id="sound-e2" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="reading">E</p></td>
+                            <td><p class="stroke-count" style="margin:0;">normal<br>length</p></td>
+                        </tr>
+                    </table>
+
+                    <table style="border-spacing:5px;">
+                        <tr>
+                            <td><p class="new-kana">エ</p></td>
+                            <td><p class="new-kana">ー</p></td>
+                            <td><img class="click" id="sound-ee" src="../themes/images/fe1sound.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="reading">EE</p></td>
+                            <td><p class="stroke-count" style="margin:0;">longer<br>length</p></td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 29: RECRUITMENT TOMAS ]------------------------------------->
+            <div id="scene-29" style="display:none;">
+                
+                <div class="dialog speech" style="text-align:center;">
+                    <p>RECRUITMENT</p>
+                </div>
+                
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-tomas.png" 
+                    id="speaking-tomas1-29" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-tomas-speak.png" 
+                    id="speaking-tomas2-29" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-29" onclick="proceedText('29')";>
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-29"></p>
+
+                    <div id ="stats-recruit-29" style="display:none;">
+                        <br><table>
+                            <tr>
+                                <td>ENGLISH NAME:</td><td> Tomas</td>
+                            </tr>
+                            <tr>
+                                <td>JAPANESE NAME:</td><td>トーマス</td>
+                            </tr>
+                            <tr>
+                                <td>CLASS:</td><td>アーチャー (Archer)</td>
+                            </tr>
+                            <tr>
+                                <td>COUNTRY:</td><td>アカネイア (Archanea)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-29"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 30: RECRUITMENT EST ]------------------------------------->
+            <div id="scene-30" style="display:none;">
+                
+                <div class="dialog speech" style="text-align:center;">
+                    <p>RECRUITMENT</p>
+                </div>
+                
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-est.png" 
+                    id="speaking-est1-30" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-est-speak.png" 
+                    id="speaking-est2-30" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-30" onclick="proceedText('30')";>
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-30"></p>
+
+                    <div id ="stats-recruit-30" style="display:none;">
+                        <br><table>
+                            <tr>
+                                <td>ENGLISH NAME:</td><td> Est</td>
+                            </tr>
+                            <tr>
+                                <td>JAPANESE NAME:</td><td>エスト</td>
+                            </tr>
+                            <tr>
+                                <td>CLASS:</td><td>P・ナイト (P. Knight)</td>
+                            </tr>
+                            <tr>
+                                <td>COUNTRY:</td><td>マケドニア (Macedon)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-30"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 31: DRILL 9-1 ]------------------------------------->
+            <div id="scene-31" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 9</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct pronunciation of the name below.</p>
+                    <p class="reading">トーマス</p>
+                    <p class="drill-option clickable" onclick="correct(this)">TOOMASU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">TOMASU</p>
+                    <p class="drill-option clickable" onclick="incorrect()">TOMAASU</p>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 32: DRILL 9-2 ]------------------------------------->
+            <div id="scene-32" style="display:none;">
+                <div class="dialog center-fit">
+                    <p>DRILL 9</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Choose the correct pronunciation of the name below.</p>
+                    <p class="reading">エスト</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ESOTO</p>
+                    <p class="drill-option clickable" onclick="correct(this)">ESUTO</p>
+                    <p class="drill-option clickable" onclick="incorrect()">ESUTU</p>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 33: DRILL 10-1 ]------------------------------------->
+            <div id="scene-33" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 10</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the Japanese version of the following word?</p>
+                    <p class="reading">Tomas</p>
+                    <p class="drill-option clickable" onclick="incorrect()">トマース</p>
+                    <p class="drill-option clickable" onclick="incorrect()">トームス</p>
+                    <p class="drill-option clickable" onclick="correct(this)">トーマス</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 34: DRILL 10-2 ]------------------------------------->
+            <div id="scene-34" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 10</p>
+                </div>
+
+                <div class="dialog">
+                    <p>What is the Japanese version of the following word?</p>
+                    <p class="reading">Est</p>
+                    <p class="drill-option clickable" onclick="correct(this)">エスト</p>
+                    <p class="drill-option clickable" onclick="incorrect()">エスナ</p>
+                    <p class="drill-option clickable" onclick="incorrect()">エクト</p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 35: DRILL 11-1 ]------------------------------------->
+            <div id="scene-35" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 11</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the Japanese name for <b>Tomas</b>.</p>
+
+                    <table style="margin:auto;margin-bottom: 10px;">
+                        <tr>
+                            <td id="scene-35-kana-1" class="masu-drill"></td>
+                            <td id="scene-35-kana-2" class="masu-drill"></td>
+                            <td id="scene-35-kana-3" class="masu-drill"></td>
+                            <td id="scene-35-kana-4" class="masu-drill"></td>
+                        </tr>
+                    </table>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-35" class="back-kana" src="../themes/images/katakana/kso-to.png" style="visibility:hidden;">
+                        <canvas id="canvas-35" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-35" class="check-canvas click" onclick="canvas_35.recognize();">CHECK</p>
+                        <p id="clear-canvas-35" class="check-canvas click" onclick="canvas_35.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 36: DRILL 11-2 ]------------------------------------->
+            <div id="scene-36" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 11</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Write the Japanese name for <b>Est</b>.</p>
+
+                    <table style="margin:auto;margin-bottom: 10px;">
+                        <tr>
+                            <td id="scene-36-kana-1" class="masu-drill"></td>
+                            <td id="scene-36-kana-2" class="masu-drill"></td>
+                            <td id="scene-36-kana-3" class="masu-drill"></td>
+                        </tr>
+                    </table>
+
+                    <div class="canvas-container">
+                        <img id="back-kana-36" class="back-kana" src="../themes/images/katakana/kso-e.png" style="visibility:hidden;">
+                        <canvas id="canvas-36" width="250" height="250" class="canvas"></canvas>
+                    </div>
+
+                    <div style="margin-top: 280px;text-align:center;">
+                        <p id="check-canvas-36" class="check-canvas click" onclick="canvas_36.recognize();">CHECK</p>
+                        <p id="clear-canvas-36" class="check-canvas click" onclick="canvas_36.erase();">CLEAR</p>
+                    </div>
+                </div>
+
+            </div>
+
+<!-------------------------------------[ SCENE 37: DRILL 12 ]------------------------------------->
+            <div id="scene-37" style="display:none;">
+
+                <div class="dialog center-fit">
+                    <p>DRILL 12</p>
+                </div>
+
+                <div class="dialog">
+                    <p>Check the image below and locate the name of certain female character you have recruited.</p>
+                    
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1050" >
+                        <image width="1200" height="1050" xlink:href="../themes/images/ch2-sc37.svg">
+                        </image>
+                            <rect id="rect1" x="480" y="695" fill="#fff" fill-opacity="0" width="125" height="50" onclick="highlight('rect1');" />
+                    </svg>
+                    <p></p>
+                </div>
+            </div>
+
+<!-------------------------------------[ SCENE 38: OUTRO ]------------------------------------->
+            <div id="scene-38" style="display:none;">
+                <!-- Character portrait -->
+                <div class="portrait">
+
+                    <!-- Frame 1 -->
+                    <img src="../themes/fe1-portraits/fe1port-gotoh.png" 
+                    id="speaking-gotoh1-38" 
+                    style="width:96px">
+
+                    <!-- Frame 2 -->
+                    <img src="../themes/fe1-portraits/fe1port-gotoh-speak.png" 
+                    id="speaking-gotoh2-38" 
+                    style="width:96px;display:none;">
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed-38" onclick="proceedText('38');">
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text-scene-38"></p>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                             id="text-arrow-scene-38"
+                             style="width:15px;display:none;">
+                    </div>
+
+                </div>
+
+            </div>
+
+<!-- --------------------------------[ SCENE FOOTER (ANSWERS AND NEXT) ]-------------------------------- -->
+            <div id="scene-footer" class="dialog" style="border: 0 none;">
+                <p id="drill-answer" style="float:left;"></p>
+                <p id="next-part" style="float:right;display:none;">NEXT</p>
+                <div style="clear: both;"></div>
+            </div>
+
+        <!-- END OF SCENE PAGE -->
+         </div>
+        <script src="./pok-ch2-flow.js"></script>
+</div>
+
+    </body>
+
+</html>

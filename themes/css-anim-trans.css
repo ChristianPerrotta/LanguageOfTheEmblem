@@ -1,0 +1,64 @@
+.fade-in {
+  animation: fadeIn ease 1s forwards;
+  -webkit-animation: fadeIn ease 1s forwards;
+  -moz-animation: fadeIn ease 1s forwards;
+  -o-animation: fadeIn ease 1s forwards;
+  -ms-animation: fadeIn ease 1s forwards;
+}
+
+.left-mov {
+    animation: leftmov ease 2s infinite;
+}
+
+.right-mov {
+    animation: rightmov ease 2s infinite;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.from-1-to-3 {
+    animation: from-1-to-3 ease 1s forwards;
+}
+
+@keyframes from-1-to-3{
+    100% {position:absolute;top:20px;left:20px;z-index:-2}
+}
+
+@keyframes leftmov {
+    0% {padding-right:20px;padding-left:20px}
+    50% {padding-right:30px;padding-left:10px}
+    100% {padding-right:20px;padding-left:20px}
+}
+
+@keyframes rightmov {
+    0% {padding-right:20px;padding-left:20px}
+    50% {padding-right:10px;padding-left:30px}
+    100% {padding-right:20px;padding-left:20px}
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}

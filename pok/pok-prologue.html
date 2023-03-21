@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang='en'>
+
+<!----------------------------------[ HEAD ]---------------------------------->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path of Katakana: Prologue</title>
+    <link rel="stylesheet" href="../themes/fe1-theme.css">
+    <link rel="stylesheet" href="../themes/css-anim-trans.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<!----------------------------------[ BODY ]---------------------------------->
+
+<body class="main-bg">
+
+    <!-- LOGO -->
+    <div>
+        <img src="../themes/images/fe1logo.png">
+    </div>
+
+    <!-- LANGUAGE OPTIONS -->
+    <div class="clearfix" style="float:right;">
+        <a href="../pt-br/pok/pok-prologo.html">
+            <img src="../themes/images/lang-ptbr.png" class="flag" id="lang-pt">
+        </a>
+        <a href="#">
+            <img src="../themes/images/lang-en.png" class="flag simple-border" id="lang-en">
+        </a>
+    </div>
+    
+<!----------------------------------[ TOP NAV ]---------------------------------->
+
+    <div class="topnav" id="mainTopnav">
+        <a href="../index.html">Home</a>
+        <a href="../path-of-katakana.html" class="active">Path of Katakana</a>
+        <a href="../settings.html">Settings</a>
+        <a href="javascript:void(0);" class="icon" onclick='$("#mainTopnav").toggleClass("responsive")'>
+            <img src="./themes/images/fe1down-arrow.jpg" width="15px">
+        </a>
+    </div>
+
+
+<div class="flex-container">
+<!----------------------------------[ SIDE NAV ]---------------------------------->
+
+    <div class="sidenav" style="flex-shrink: 0" id="sideNav">
+        <a href="./pok-prologue.html" class="active" id="nav-prologue">Prologue</a>
+        <a href="./pok-ch1.html" class="locked" id="nav-ch1">Chapter 1</a>
+        <a href="./pok-ch2.html" class="locked" id="nav-ch2">Chapter 2</a>
+        <a href="" class="locked" id="nav-ch3">Chapter 3</a>
+        <a href="javascript:void(0);" class="icon" onclick='$("#sideNav").toggleClass("responsive")'>
+            <img src="../themes/images/fe1down-arrow.jpg" style="width:15px">
+        </a>
+    </div>
+
+    <script src="../progress-check.js"></script>
+
+<!----------------------------------[ CONTENT ]---------------------------------->
+
+        <div class="chapter-box">
+
+            <div id="prologue-1" class="invisible">
+
+                <div class="portrait">
+
+                    <img src="../themes/fe1-portraits/fe1port-anna.png" 
+                    id="speaking-anna1" 
+                    style="width:96px">
+
+                    <img src="../themes/fe1-portraits/fe1port-anna-speak.png" 
+                    id="speaking-anna2" 
+                    style="width:96px;display:none;">
+
+                </div>
+
+                <div class="dialog speech std-h" id="click-to-proceed">
+                    
+                    <!-- Text added with JS -->
+                    <p id="flow-text"></p>
+
+                    <!-- Flashing arrow -->
+                    <div style="text-align:center;">
+                        <img src="../themes/images/fe1down-arrow.jpg"
+                        id="text-arrow"
+                        style="width:15px;display:none;">
+                    </div>
+
+                    <!-- Next Chapter Button -->
+                    <div class="next-chapter"
+                    id="next-chapter"
+                    style="display:none;">
+                        <p><br></p>
+                        <a href="./pok-ch1.html">BEGIN CHAPTER 1</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./pok-prologue-flow.js"></script>
+
+</body>
+
+</html>
